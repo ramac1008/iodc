@@ -51,7 +51,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: domain-ingress
-  namespace: argocd
 spec:
   rules:
   - host: mobilefactory.app
@@ -63,5 +62,5 @@ spec:
           service:
             name: oidctest
             port:
-              name: http
+              name: flask
 
