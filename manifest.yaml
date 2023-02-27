@@ -55,6 +55,7 @@ metadata:
   namespace: argocd
   annotations:
     kubernetes.io/ingress.class: "gce"
+    ingress.gcp.kubernetes.io/default-backend: oidctest-lb
 spec:
   rules:
   - host: mobilefactory.app
