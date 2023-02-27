@@ -16,15 +16,6 @@ spec:
   selector:
     app: oidctest
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: iodc-lb-dns
-  namespace: argocd
-spec:
-  type: ExternalName
-  externalName: oidctest-lb
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -73,6 +64,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: iodc-lb-dns
+            name: oidctest-lb
             port:
               name: flask
