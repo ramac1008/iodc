@@ -57,7 +57,7 @@ metadata:
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - host: mobilefactory.app:5000
+  - host: mobilefactory.app
     http:
       paths:
       - path: /
@@ -67,3 +67,4 @@ spec:
             name: oidctest-lb
             port:
               name: flask
+          port: 5000
