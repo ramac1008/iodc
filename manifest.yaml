@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: oidctest
+  name: oidctest-lb
   namespace: argocd
   annotations:
     cloud.google.com/load-balancer-type: "internal"
   labels:
-    app: oidctest
+    app: oidctest-lb
 spec:
   ports:
   - port: 5000
@@ -65,6 +65,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: oidctest
+            name: oidctest-lb
             port:
               name: flask
