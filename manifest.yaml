@@ -57,7 +57,7 @@ metadata:
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - host: mobilefactory.app
+  - host: mobilefactory.app:5000
     http:
       paths:
       - path: /
