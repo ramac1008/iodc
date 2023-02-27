@@ -63,10 +63,8 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          serviceName: oidctest-lb
-          servicePort: flask
           service:
             name: oidctest-lb
             port:
               name: flask
-  
+
